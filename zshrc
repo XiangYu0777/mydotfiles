@@ -70,7 +70,7 @@ fi
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -86,17 +86,30 @@ fi
 # ENV
 export RUN_ENVIRON="dev"
 source ~/.aliases
-#source /usr/local/Cellar/zsh-autosuggestions/0.3.3/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
 export SVN_EDITOR=vim
 export EDITOR=vim
 
-export PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:$PATH" 
-export PATH="/usr/local/mysql/bin:$PATH" 
+export PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/mysql/bin:$PATH"
+
+# PHP56
 export PATH="$(brew --prefix php56)/bin:$PATH"  #for php
 export PATH="$(brew --prefix php56)/sbin:$PATH" #for php-fpm
+
+# PHP71
+#export PATH="$(brew --prefix php71)/bin:$PATH"  #for php
+#export PATH="$(brew --prefix php71)/sbin:$PATH" #for php-fpm
+
+# PHP72
+#export PATH="$(brew --prefix php72)/bin:$PATH"  #for php
+#export PATH="$(brew --prefix php72)/sbin:$PATH" #for php-fpm
+
+# For PHP composer path
+export PATH="~/.composer/vendor/bin:$PATH"
+
 eval $(thefuck --alias fuck)
 
 # man page highlight
@@ -110,4 +123,26 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 export CDPATH='.:/Users/tristana'
 
 # 代理
-export ALL_PROXY=socks5://127.0.0.1:1080
+#alias proxy='export all_proxy=socks5://127.0.0.1:1086'
+alias proxy='export all_proxy=http://127.0.0.1:1080'
+alias unproxy='unset all_proxy'
+
+export no_proxy="localhost,127.0.0.1,test.io,www.solosea.com,www.solosea.cn,www.unionv2.com,member.unionv2.com"
+#export http_proxy=http://127.0.0.1:1088
+#export https_proxy=$http_proxy;
+#
+#function proxy_off()
+#{
+#    unset http_proxy
+#    unset https_proxy
+#    echo -e "已关闭代理..."
+#}
+#
+#function proxy_on()
+#{
+#    export no_proxy="localhost,127.0.0.1,test.io,www.solosea.com,www.unionv2.com,member.unionv2.com"
+#    export http_proxy=http://127.0.0.1:1088
+#    export https_proxy=$http_proxy
+#    echo -e "已开启代理..."
+#}
+export PATH="/usr/local/opt/curl/bin:$PATH"

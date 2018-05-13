@@ -14,10 +14,10 @@ set nocompatible				" Don't make Vim vi-compatibile.
 syntax on						" Enable syntax highlighting.
 
 if has("autocmd")
-	filetype plugin indent on
-	"           |     |    |_____ Enable file type detection.
-	"           |     |__________ Enable loading of indent file.
-	"           |________________ Enable loading of plugin files.
+    filetype plugin indent on
+    "           |     |    |_____ Enable file type detection.
+    "           |     |__________ Enable loading of indent file.
+    "           |________________ Enable loading of plugin files.
 endif
 
 set autoindent				    " Copy indent to the new line.
@@ -27,15 +27,15 @@ set backspace+=eol				"  | Allow `backspace`
 set backspace+=start			" -  in insert mode.
 
 set clipboard=unnamed			" -
-								"  | Use the system clipboard
+"  | Use the system clipboard
 if has("unnamedplus")			"  | as the default register.
-	set clipboard+=unnamedplus	"  |
+    set clipboard+=unnamedplus	"  |
 endif							" -
 
 set cpoptions+=$				" when making a change, don't
-								" redisplay the line, and instead
-								" put a `$` sign at the end of
-                                " the changed text.
+" redisplay the line, and instead
+" put a `$` sign at the end of
+" the changed text.
 
 set colorcolumn=73				" Highlight certain column(s).
 set cursorline  				" Highlight the current line.
@@ -45,14 +45,14 @@ set hlsearch					" Enable search highlighting.
 set ignorecase					" Ignore case in search patterns.
 
 set incsearch					" Highlight search pattern
-								" as it is being typed.
+" as it is being typed.
 
 set laststatus=2				" Always show the status line.
 
 set lazyredraw					" Do not redraw the screen while
-								" executing macros, registers
-								" and other commands that have
-								" not been typed.
+" executing macros, registers
+" and other commands that have
+" not been typed.
 
 set listchars=tab:▸\            " ┐
 set listchars+=trail:·          " │ Use custom symbols to
@@ -64,21 +64,21 @@ set mousehide					" Hide mouse pointer while typing.
 set noerrorbells				" Disable error bells.
 
 set nojoinspaces				" When using the join command,
-                                " only insert a single space
-								" after a `.`, `?`, or `!`.
+" only insert a single space
+" after a `.`, `?`, or `!`.
 
 set nostartofline				" Kept the cursor on the same column.
 set number						" Show line number.
 
 set numberwidth=5				" Increase the minimal number of
-								" columns used for the `line number`.
+" columns used for the `line number`.
 
 set report=0					" Report the number of lines changed.
 set ruler						" Show cursor position.
 
 set scrolloff=5					" When scrolling, keep the cursor
-								" 5 lines below the top and 5 lines
-								" above the bottom of the screen.
+" 5 lines below the top and 5 lines
+" above the bottom of the screen.
 
 set shortmess=aAItW				" Avoid all the hit-enter prompts.
 set showcmd						" Show the command being typed.
@@ -86,12 +86,12 @@ set showmode					" Show current mode.
 set spelllang=en_us				" Set the spellchecking language.
 
 set smartcase					" Override `ignorecase` option
-								" if the search pattern contains
-								" uppercase characters.
+" if the search pattern contains
+" uppercase characters.
 
 set synmaxcol=2500				" Limit syntax highlighting (this
-								" avoids the very slow redrawing
-								" when files contain long lines).
+" avoids the very slow redrawing
+" when files contain long lines).
 
 set tabstop=4                   " ┐
 set softtabstop=4               " │ Set global <TAB> settings.
@@ -106,11 +106,11 @@ set noerrorbells                " │ Disable beeping and window flashing
 set t_vb=                       " ┘ https://vim.wikia.com/wiki/Disable_beeping
 
 set wildmenu					" Enable enhanced command-line
-								" completion (by hitting <TAB> in
-								" command mode, Vim will show the
-								" possible matches just above the
-								" command line with the first
-								" match highlighted).
+" completion (by hitting <TAB> in
+" command mode, Vim will show the
+" possible matches just above the
+" command line with the first
+" match highlighted).
 
 set winminheight=0				" Allow windows to be squashed.
 
@@ -144,40 +144,40 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin("~/.vim/plugins")
 
-	Plugin 'gmarik/Vundle.vim'
+Plugin 'gmarik/Vundle.vim'
 
-	" Plugin 'altercation/vim-colors-solarized'
-    Plugin 'kristijanhusak/vim-hybrid-material'
-    Plugin 'ap/vim-css-color'
-	Plugin 'chrisbra/unicode.vim'
-	Plugin 'godlygeek/tabular'
-    Plugin 'isRuslan/vim-es6'
-	Plugin 'jelera/vim-javascript-syntax'
-    Plugin 'kien/ctrlp.vim'
-    Plugin 'marijnh/tern_for_vim'
-    Plugin 'mattn/emmet-vim'
-    Plugin 'mattn/webapi-vim'
-    Plugin 'mhinz/vim-signify'
-    Plugin 'moll/vim-node'
-    Plugin 'mtscout6/syntastic-local-eslint.vim'
-	Plugin 'shawncplus/phpcomplete.vim'
-	Plugin 'nathanaelkane/vim-indent-guides'
-    Plugin 'raimondi/delimitmate'
-    Plugin 'scrooloose/nerdtree'
-    Plugin 'scrooloose/syntastic'
-    Plugin 'sheerun/vim-polyglot'
-    Plugin 'shougo/neocomplcache.vim'
-    Plugin 'shougo/neosnippet'
-    Plugin 'shougo/neosnippet-snippets'
-    Plugin 'shutnik/jshint2.vim'
-    Plugin 'suan/vim-instant-markdown'
-    Plugin 'tomtom/tcomment_vim'
-	Plugin 'tpope/vim-commentary'
-    Plugin 'tpope/vim-fugitive'
-    Plugin 'tpope/vim-repeat'
-    Plugin 'tpope/vim-surround'
-    Plugin 'tpope/vim-unimpaired'
-    Plugin 'wellle/targets.vim'
+" Plugin 'altercation/vim-colors-solarized'
+Plugin 'kristijanhusak/vim-hybrid-material'
+Plugin 'ap/vim-css-color'
+Plugin 'chrisbra/unicode.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'isRuslan/vim-es6'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'kien/ctrlp.vim'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'mhinz/vim-signify'
+Plugin 'moll/vim-node'
+Plugin 'mtscout6/syntastic-local-eslint.vim'
+Plugin 'shawncplus/phpcomplete.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'raimondi/delimitmate'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'shougo/neocomplcache.vim'
+Plugin 'shougo/neosnippet'
+Plugin 'shougo/neosnippet-snippets'
+Plugin 'shutnik/jshint2.vim'
+Plugin 'suan/vim-instant-markdown'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'wellle/targets.vim'
 "	Plugin 'fatih/vim-go'
 "	Plugin 'Valloric/YouCompleteMe'
 
@@ -218,12 +218,12 @@ let g:user_emmet_settings = webapi#json#decode(join(readfile(expand("~/.vim/snip
 let g:indent_guides_auto_colors = 0
 
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd
-        \ guibg=#00323D
-        \ ctermbg=Magenta
+            \ guibg=#00323D
+            \ ctermbg=Magenta
 
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven
-        \ guibg=#073642
-        \ ctermbg=DarkMagenta
+            \ guibg=#073642
+            \ ctermbg=DarkMagenta
 
 
 
@@ -294,10 +294,10 @@ let g:syntastic_javascript_checkers = [ 'eslint' ]
 " Disable syntax checking by default.
 
 let g:syntastic_mode_map = {
-    \ "active_filetypes": [],
-    \ "mode": "passive",
-    \ "passive_filetypes": []
-\}
+            \ "active_filetypes": [],
+            \ "mode": "passive",
+            \ "passive_filetypes": []
+            \}
 
 
 " ----------------------------------------------------------------------
@@ -470,23 +470,23 @@ endif
 " set t_Co=256                   " Enable full-color support.
 
 set background=dark            " Use colors that look good
-                               " on a dark background.
+" on a dark background.
 
 " Set custom configurations for when the
 " Solarized theme is used from Vim's Terminal mode.
 "
 " http://ethanschoonover.com/solarized/vim-colors-solarized#advanced-configuration
 
-"if !has("gui_running")
-"    let g:solarized_contrast = "high"
-"    let g:solarized_termcolors = 256
-"    let g:solarized_termtrans = 1
-"    let g:solarized_visibility = "high"
-"endif
+if !has("gui_running")
+    let g:solarized_contrast = "high"
+    let g:solarized_termcolors = 256
+    let g:solarized_termtrans = 1
+    let g:solarized_visibility = "high"
+endif
 
 " colorscheme solarized          " Use custom color scheme.
+let g:hybrid_custom_term_colors = 1
 colorscheme hybrid_material
-let g:enable_bold_font = 1
 
 " autocmd InsertLeave * se nocul
 " autocmd InsertEnter * se cul
@@ -501,3 +501,16 @@ set t_Co=256
 
 " crontab problem 解决
 set backupskip=/tmp/*,/private/tmp/*
+
+
+
+" MacVim uses Homebrew python3 if installed, next try to use python.org binary
+if has('python3')
+    command! -nargs=1 Py py3 <args>
+    set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/3.6/Python
+    set pythonthreehome=/usr/local/Frameworks/Python.framework/Versions/3.6
+else
+    command! -nargs=1 Py py <args>
+    set pythondll=/usr/local/Frameworks/Python.framework/Versions/2.7/Python
+    set pythonhome=/usr/local/Frameworks/Python.framework/Versions/2.7
+endif
