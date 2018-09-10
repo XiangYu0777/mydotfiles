@@ -1,5 +1,5 @@
 " 普通模式支持快捷键保存退出
-nnoremap <silent><buffer> q :pclose!<CR>:quit<CR>
+nnoremap <silent><buffer> q  :pclose!<CR>:quit<CR>
 nnoremap <C-x>  :x<CR>
 
 nnoremap <silent> <C-q> :<C-u>:quit!<CR>
