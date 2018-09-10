@@ -25,9 +25,6 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
@@ -96,12 +93,12 @@ export PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 
 # PHP56
-export PATH="$(brew --prefix php56)/bin:$PATH"  #for php
-export PATH="$(brew --prefix php56)/sbin:$PATH" #for php-fpm
+#export PATH="$(brew --prefix php56)/bin:$PATH"  #for php
+#export PATH="$(brew --prefix php56)/sbin:$PATH" #for php-fpm
 
 # PHP71
-#export PATH="$(brew --prefix php71)/bin:$PATH"  #for php
-#export PATH="$(brew --prefix php71)/sbin:$PATH" #for php-fpm
+export PATH="$(brew --prefix php71)/bin:$PATH"  #for php
+export PATH="$(brew --prefix php71)/sbin:$PATH" #for php-fpm
 
 # PHP72
 #export PATH="$(brew --prefix php72)/bin:$PATH"  #for php
@@ -110,7 +107,7 @@ export PATH="$(brew --prefix php56)/sbin:$PATH" #for php-fpm
 # For PHP composer path
 export PATH="~/.composer/vendor/bin:$PATH"
 
-eval $(thefuck --alias fuck)
+#eval $(thefuck --alias fuck)
 
 # man page highlight
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
@@ -146,3 +143,6 @@ export no_proxy="localhost,127.0.0.1,test.io,www.solosea.com,www.solosea.cn,www.
 #    echo -e "已开启代理..."
 #}
 export PATH="/usr/local/opt/curl/bin:$PATH"
+
+# Powerline
+#. /Users/tristana/Dropbox/dotfiles/src/powerline/powerline/bindings/zsh/powerline.zsh

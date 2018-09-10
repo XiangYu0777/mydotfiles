@@ -1,3 +1,11 @@
+" 普通模式支持快捷键保存退出
+nnoremap <silent><buffer> q :pclose!<CR>:quit<CR>
+nnoremap <C-x>  :x<CR>
+
+nnoremap <silent> <C-q> :<C-u>:quit!<CR>
+inoremap <silent> <C-q> <Esc>:<C-u>:quit!<CR>
+
+
 " 定义快捷键前缀，即 <Leader>
 let mapleader=";"
 
@@ -494,7 +502,7 @@ colorscheme hybrid_material
 " 让配置变更立即生效
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
+"set rtp+=/Users/tristana/Dropbox/dotfiles/src/powerline/powerline/bindings/vim/
 set laststatus=2
 set t_Co=256
 
@@ -502,15 +510,15 @@ set t_Co=256
 " crontab problem 解决
 set backupskip=/tmp/*,/private/tmp/*
 
-
+"let g:powerline_pycmd = 'py3'
 
 " MacVim uses Homebrew python3 if installed, next try to use python.org binary
-if has('python3')
-    command! -nargs=1 Py py3 <args>
-    set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/3.6/Python
-    set pythonthreehome=/usr/local/Frameworks/Python.framework/Versions/3.6
-else
-    command! -nargs=1 Py py <args>
-    set pythondll=/usr/local/Frameworks/Python.framework/Versions/2.7/Python
-    set pythonhome=/usr/local/Frameworks/Python.framework/Versions/2.7
-endif
+"if has('python3')
+ "   command! -nargs=1 Py py3 <args>
+  "  set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/3.7/Python
+   " set pythonthreehome=/usr/local/Frameworks/Python.framework/Versions/3.7
+"else
+ "   command! -nargs=1 Py py <args>
+  "  set pythondll=/usr/local/Frameworks/Python.framework/Versions/2.7/Python
+   " set pythonhome=/usr/local/Frameworks/Python.framework/Versions/2.7
+"endif
